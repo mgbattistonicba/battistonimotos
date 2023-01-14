@@ -1,18 +1,14 @@
 .navbar{
     display:flex ;
-    background: pink;
-    justify-content: space-between;
 }
 
 .title {
-    display: flex;
+    display: inline-block;
     justify-content: left;
     text-align: left;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 70vh;
+.carrito {
+    width: 30px;
+    background-color: #aee0f7;
 }
