@@ -1,0 +1,18 @@
+.navbar{
+    display:flex ;
+    background: pink;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70vh;
+}
