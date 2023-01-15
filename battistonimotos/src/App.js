@@ -4,6 +4,7 @@ import Button from './components/Navbar/Button';
 import CartWidget from './components/Navbar/CartWidget';
 import ItemListContainer from './components/Navbar/ItemListContainer';
 import ItemCount from './components/Navbar/ItemCount';
+import { useState } from 'react';
 
 function App() {
   return (
