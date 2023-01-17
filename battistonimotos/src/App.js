@@ -5,22 +5,16 @@ import CartWidget from './components/Navbar/CartWidget';
 import ItemListContainer from './components/Navbar/ItemListContainer';
 import ItemCount from './components/Navbar/ItemCount';
 import { useState } from 'react';
+import ItemList from './components/Navbar/ItemList';
 
 function App() {
   return (
     <div className="Button">
         <Navbar />
+        <Button />
         <ItemListContainer greeting={""} />
         <ItemCount />
-        <Button handleClick={() => console.log('Motos')} >
-          Motos
-        </Button>
-        <Button handleClick={() => console.log('Accesorios')} >
-          Accesorios
-        </Button>
-        <Button handleClick={() => console.log('Contacto')}>
-           Contacto 
-        </Button>
+        <ItemList />
         <CartWidget />
     </div>
    

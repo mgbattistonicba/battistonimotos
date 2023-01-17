@@ -26,9 +26,9 @@ const ItemCount = ({onAdd}) => {
     return (
         <div>
             <h2>{count}</h2>
-            <button onclick={decrement}>-</button>
-            <button onclick={increment}>+</button>
-            <button onclick={() => onAdd(count)}>Agregar al carrito</button>
+            <button onClick={decrement}>-</button>
+            <button onClick={increment}>+</button>
+            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 }
