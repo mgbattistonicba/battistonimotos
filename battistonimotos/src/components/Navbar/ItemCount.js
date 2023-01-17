@@ -4,7 +4,7 @@ const ItemCount = ({onAdd}) => {
     const [count, setCount]= useState(0)
 
     const decrement = () =>{
-        for(let i = 0; i < 0; i++) {
+        for(let i = 0; i < 0; i--) {
         setCount(prev =>{
         return prev - 1
         } )
