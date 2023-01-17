@@ -14,7 +14,6 @@ function App() {
         <Button />
         <ItemListContainer greeting={""} />
         <ItemCount />
-        <ItemList />
         <CartWidget />
     </div>
    
