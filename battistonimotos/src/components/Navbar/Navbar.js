@@ -1,24 +1,24 @@
-import "./Navbar.css"
-import "./CartWidget"
-import Button from "./Button"
+import { NavLink, Link } from 'react-router-dom'
+import CartWidget from './CartWidget'
+import './Navbar.css'
 
-const Navbar = () => {
-    return (
-        <nav className="navbar">
-            <h1 className="title">Battistoni Motos</h1>
-            <Button handleClick={() => console.log('Motos')} >
-                Motos
-            </Button>
-            <Button handleClick={() => console.log('Accesorios')} >
-                Accesorios
-            </Button>
-            <Button handleClick={() => console.log('Contacto')}>
-                Contacto
-            </Button>
-        </nav>
+import { useNavigate } from 'react-router-dom'
 
-    )
+const NavBar = () => {
 
+  const navigate = useNavigate()
+
+  return (
+    <nav className="NavBar" >
+          <h3 onClick={() => navigate('/')}>Ecommerce</h3>
+        <div className="Categories">
+          <NavLink to={`/category/Moto`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Moto</NavLink>
+          <NavLink to={`/category/Accesorio`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Accesorio</NavLink>
+          <NavLink to={`/category/Contacto`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Contacto</NavLink>
+        </div>
+        <CartWidget />
+    </nav>
+  )
 }
 
-export default Navbar
+export default NavBar

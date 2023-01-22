@@ -1,24 +1,27 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Button from './components/Navbar/Button';
-import CartWidget from './components/Navbar/CartWidget';
 import ItemListContainer from './components/Navbar/ItemListContainer';
-import ItemCount from './components/Navbar/ItemCount';
-import { useState } from 'react';
-import ItemList from './components/Navbar/ItemList';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from './components/Navbar/ItemDetailContainer';
 
 function App() {
+
+
   return (
-    <div className="Button">
+    <div className="app">
+      <BrowserRouter>
         <Navbar />
-        <Button />
-        <ItemListContainer greeting={""} />
-        <ItemCount />
-        <CartWidget />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting={"Productos destacados"} />} />
+          <Route path='Detail' element={<ItemDetailContainer />} />
+          
+        </Routes>
+      </BrowserRouter>
     </div>
-   
+
   );
-  
+
 }
 
 export default App;

@@ -5,20 +5,28 @@ const products = [
     { id: '4', name: 'Yamaha R1M', price: 41.000, category: 'sport', img: 'https://www.yamaha-motor.com.ar/modelo/yzf-r1m#images-9',}, 
 ]
 
-export const getProducts = () => {
-    return new Promise ((resolve) => {
+export const getProducts = (categoryId) => {
+    console.log(categoryId)
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products)
-        }, 1500)
+        }, 500)
     })
 }
 
-
 export const getProductsByCategory = (categoryId) => {
-    return new Promise ((resolve) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(products)
-        }, 1500)
+            resolve(products.filter(prod => prod.category === categoryId))
+        },1000000)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === id))
+        },1000000)
     })
 }
 
