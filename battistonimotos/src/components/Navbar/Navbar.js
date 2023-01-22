@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <nav className="NavBar" >
-          <h3 onClick={() => navigate('/')}>Battistoni Motos</h3>
+          <h1 onClick={() => navigate('/')}>Battistoni Motos</h1>
         <div className="Categories">
           <NavLink to={`/category/Moto`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Moto</NavLink>
           <NavLink to={`/category/Accesorio`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Accesorio</NavLink>
