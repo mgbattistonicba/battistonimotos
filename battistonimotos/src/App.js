@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import NavBar from './components/Navbar/Navbar';
 import ItemListContainer from './components/Navbar/ItemListContainer';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <Navbar />
+        <NavBar />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting={"Productos destacados"} />} />
           <Route path='category/:categoryId' element={<ItemListContainer greeting={"Productos filtrados"} />} /> 
