@@ -14,8 +14,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<ItemListContainer greeting={"Productos destacados"} />} />
-          <Route path='Detail' element={<ItemDetailContainer />} />
-          
+          <Route path='category/:categoryId' element={<ItemListContainer greeting={"Productos filtrados"} />} /> 
+          <Route path='Detail/:productId' element={<ItemDetailContainer />} />        
         </Routes>
       </BrowserRouter>
     </div>

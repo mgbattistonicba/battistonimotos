@@ -20,7 +20,7 @@ const Item = ({id, name, img, price}) => {
             </picture>
             <section>
                 <p className="Info">
-                    Precio: ${price}
+                    Precio: U$S {price}
                 </p>
             </section>           
             <footer className='ItemFooter'>

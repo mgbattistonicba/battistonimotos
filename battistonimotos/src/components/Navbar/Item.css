@@ -1,9 +1,9 @@
 .CardItem {
-    width: 150px;
+    width: 300px;
     padding: 30px;
     margin: 30px;
     font-size: 10px;
-    background-color: papayawhip;
+    background: rgb(134, 207, 246);
     border: 1px solid #e1e1e1;
     border-radius: 10px;
 }
@@ -13,17 +13,6 @@
     flex-direction: column;
     margin-bottom: 10px;
     border-radius: 25px;
-}
-
-.ItemHeader {
-    display: flex;
-    justify-content: center;
-}
-
-.Info {
-    font-size: 12px;
-    display: flex;
-    justify-content: space-around;
 }
 
 .ButtonDetail {
@@ -45,13 +34,6 @@
     border-style: none;
     cursor: pointer;
     outline: inherit;
-}
-
-.ItemImg {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    object-position: center;
 }
 
 .ItemFooter {

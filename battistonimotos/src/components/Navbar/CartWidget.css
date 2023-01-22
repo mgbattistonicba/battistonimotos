@@ -1,7 +1,7 @@
 .CartWidget {
     padding: 12px;
     font-size: 8px;
-    background: wheat;
+    background: rgb(134, 207, 246);
     border-radius: 8px;
     flex: none;
     display: flex;
