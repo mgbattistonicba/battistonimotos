@@ -12,8 +12,9 @@ const NavBar = () => {
     <nav className="NavBar" >
           <h1 onClick={() => navigate('/')}>Battistoni Motos</h1>
         <div className="Categories">
-          <NavLink to={`/category/Moto`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Moto</NavLink>
-          <NavLink to={`/category/Accesorio`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Accesorio</NavLink>
+          <NavLink to={`/category/Motos`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Motos</NavLink>
+          <NavLink to={`/category/Accesorios`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Accesorios</NavLink>
+          <NavLink to={`/category/Cascos`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Cascos</NavLink>
           <NavLink to={`/category/Contacto`} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Contacto</NavLink>
         </div>
         <CartWidget />
