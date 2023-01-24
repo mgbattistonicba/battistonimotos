@@ -13,12 +13,11 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(() => {
         const onResize = (event) => {
-            console.log(event)
-            console.log('cambie tamaño de pantalla')
+            
         }
 
         const onResize2 = () => {
-            console.log('otra cosa')
+           
         }
 
         window.addEventListener('resize', onResize)
