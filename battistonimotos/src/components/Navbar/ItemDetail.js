@@ -1,6 +1,5 @@
 import './ItemDetail.css'
 import { useState } from 'react'
-import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 
 const InputCount = ({onConfirm, stock, initial= 1}) => {
