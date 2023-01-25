@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
     return(
         <div className='ItemDetailContainer' >
             <h1>Detalle {product.name}</h1>
-            <ItemDetail {...product}/>
+            <ItemDetail {...product} />
         </div>
     )
 }
