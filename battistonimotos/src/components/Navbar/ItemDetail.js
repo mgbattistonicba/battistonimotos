@@ -3,31 +3,26 @@ import { useState } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 
-const InputCount = ({onConfirm, stock, initial= 1}) => {
+const InputCount = ({onAdd, stock, initial= 1}) => {
     const [count, setCount] = useState(initial)
 
     const handleChange = (e) => {
-        if(e.target.value <= stock) {
             setCount(e.target.value)
-        }
     }
 
     return (
         <div>
             <input type='number' onChange={handleChange} value={count}/>
-            <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
+            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 }
 
-const ButtonCount = ({ onConfirm, stock, initial = 1 }) => {
+const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
     const [count, setCount] = useState(initial)
 
     const increment = () => {
-        if(count < stock) {
             setCount(count + 1)
-        }
-
     }
 
     const decrement = () => {
@@ -40,7 +35,7 @@ const ButtonCount = ({ onConfirm, stock, initial = 1 }) => {
             <p>{count}</p>
             <button onClick={decrement}>-</button>
             <button onClick={increment}>+</button>
-            <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
+            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 }
@@ -87,7 +82,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description}) => {
                     quantity > 0 ? (
                         <Link to='/cart'>Terminar compra</Link>
                     ) : (
-                        <ItemCount stock={stock} onConfirm={handleOnAdd} />
+                        <ItemCount stock={stock} onAdd={handleOnAdd} />
                     )
                 }
             </footer>

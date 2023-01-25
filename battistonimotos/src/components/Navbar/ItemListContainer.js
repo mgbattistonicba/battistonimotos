@@ -54,7 +54,6 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <div className='ItemListContainer' onClick={() => console.log('hice click en itemlistcontainer')}>
-            <button onClick={(event) => console.log(event)}>Ver evento sintetico</button>
             <h1>{greeting}</h1>
             <ItemList products={products} />
         </div>
