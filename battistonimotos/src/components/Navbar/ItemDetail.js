@@ -2,7 +2,7 @@ import './ItemDetail.css'
 import { useContext, useState } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../App'
+import { CartContext } from '../../context/CartContext'
 
 const InputCount = ({onAdd, stock, initial= 1}) => {
     const [count, setCount] = useState(initial)
@@ -43,7 +43,7 @@ const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
 
 
 const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
-    const [inputType, setInputType] = useState('input')
+    const [inputType, setInputType] = useState('button')
     const [quantity, setQuantity] = useState(0)
 
     const ItemCount = inputType === 'input' ? InputCount : ButtonCount
