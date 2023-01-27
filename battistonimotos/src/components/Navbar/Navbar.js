@@ -2,9 +2,7 @@ import { useContext } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
 import './Navbar.css'
-
 import { useNavigate } from 'react-router-dom'
-
 import { CartContext } from '../../context/CartContext'
 
 const NavBar = () => {

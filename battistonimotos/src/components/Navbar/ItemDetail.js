@@ -48,7 +48,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
 
     const ItemCount = inputType === 'input' ? InputCount : ButtonCount
 
-    const [addItem, isInCart] = useContext(CartContext)
+    const { addItem, isInCart } = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         console.log('agregue al carrito: ', quantity)
