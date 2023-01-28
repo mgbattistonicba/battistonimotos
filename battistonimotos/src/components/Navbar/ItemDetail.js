@@ -3,6 +3,7 @@ import { useContext, useState } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
+import { NotificationContext } from '../../context/Notification'
 
 const InputCount = ({onAdd, stock, initial= 1}) => {
     const [count, setCount] = useState(initial)
@@ -30,7 +31,6 @@ const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
             setCount(count - 1)
 
     }
-
     return (
         <div>
             <p>{count}</p>
@@ -44,18 +44,20 @@ const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
 
 const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
     const [inputType, setInputType] = useState('button')
-    const [quantity, setQuantity] = useState(0)
+//    const [quantity, setQuantity] = useState(0)
 
     const ItemCount = inputType === 'input' ? InputCount : ButtonCount
 
     const { addItem, isInCart } = useContext(CartContext)
+    const setNotification = useContext(NotificationContext)
 
     const handleOnAdd = (quantity) => {
         console.log('agregue al carrito: ', quantity)
 
-        setQuantity(parseInt(quantity))
+//        setQuantity(parseInt(quantity))
 
         addItem({ id, name, price, quantity })
+        setNotification(`Se agrego ${quantity} ${name}`)
     }
 
     return (
