@@ -1,60 +1,17 @@
 import './ItemDetail.css'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import { NotificationContext } from '../../context/Notification'
 
-const InputCount = ({onAdd, stock, initial= 1}) => {
-    const [count, setCount] = useState(initial)
-
-    const handleChange = (e) => {
-            setCount(e.target.value)
-    }
-
-    return (
-        <div>
-            <input type='number' onChange={handleChange} value={count}/>
-            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
-        </div>
-    )
-}
-
-const ButtonCount = ({ onAdd, stock, initial = 1 }) => {
-    const [count, setCount] = useState(initial)
-
-    const increment = () => {
-            setCount(count + 1)
-    }
-
-    const decrement = () => {
-            setCount(count - 1)
-
-    }
-    return (
-        <div>
-            <p>{count}</p>
-            <button onClick={decrement}>-</button>
-            <button onClick={increment}>+</button>
-            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
-        </div>
-    )
-}
-
 
 const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
-    const [inputType, setInputType] = useState('button')
-//    const [quantity, setQuantity] = useState(0)
-
-    const ItemCount = inputType === 'input' ? InputCount : ButtonCount
-
     const { addItem, isInCart } = useContext(CartContext)
     const setNotification = useContext(NotificationContext)
 
     const handleOnAdd = (quantity) => {
         console.log('agregue al carrito: ', quantity)
-
-//        setQuantity(parseInt(quantity))
 
         addItem({ id, name, price, quantity })
         setNotification(`Se agrego ${quantity} ${name}`)
@@ -62,9 +19,6 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
 
     return (
         <article className="CardItem">
-            <button onClick={() => setInputType(inputType === 'input' ? 'button' : 'input')}>
-                Cambiar contador
-            </button>
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
