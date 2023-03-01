@@ -43,8 +43,12 @@ export const CartProvider = ({ children }) => {
 
       const total = getTotal()
 
+      const clearCart = () => {
+        setCart([])
+      }
+
     return (
-        <CartContext.Provider value={{ cart, addItem, isInCart, totalQuantity }}>
+        <CartContext.Provider value={{ cart, addItem, isInCart, totalQuantity, total, clearCart }}>
         {children} 
         </CartContext.Provider>
     )
