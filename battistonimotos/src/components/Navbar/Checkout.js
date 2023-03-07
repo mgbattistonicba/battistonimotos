@@ -3,6 +3,7 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { db } from "../../service/firebase/FirebaseConfig"
 import { useNavigate } from "react-router-dom"
+import Form from "./Form"
 
 
 const Checkout = () => {
@@ -97,12 +98,9 @@ const Checkout = () => {
     return (
         <div>
             <h2>Checkout</h2>
-
-           {/* <Form onGenerateOrder={createOrder} />}
-           {/* este button va dentro del form*/}
+            <Form />
             <button onClick={createOrder} >Generar orden de compra</button>
-        </div>
-
+        </div>  
     )
 }
 
