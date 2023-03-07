@@ -9,7 +9,7 @@ const CartContainer = () => {
 
     return (
         <div>
-            <h2>Cart</h2>
+            <h2>Estos son los productos de tu carrito</h2>
             <div>
                 {
                     cart.map(prod => {

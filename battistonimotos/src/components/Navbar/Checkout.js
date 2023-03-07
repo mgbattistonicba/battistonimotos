@@ -74,8 +74,8 @@ const Checkout = () => {
             } else {
                 console.error('Hay producto fuera de stock')
             }
-        } catch(error) {
-            console.error(error)
+        } catch (error) {
+           
         }finally {
             setLoading(false)
         }
@@ -93,13 +93,16 @@ const Checkout = () => {
         )
     }
 
+
     return (
         <div>
             <h2>Checkout</h2>
+
            {/* <Form onGenerateOrder={createOrder} />}
            {/* este button va dentro del form*/}
             <button onClick={createOrder} >Generar orden de compra</button>
         </div>
+
     )
 }
 
