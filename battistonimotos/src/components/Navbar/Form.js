@@ -42,14 +42,21 @@ function Form() {
               <input 
                 type="email" 
                 email='email' 
-                placeholder='Ingrese su Email'
+                placeholder='Ingrese su e-mail'
                 onChange={handleChange}
               />
                 
               <input 
                 type="phone" 
                 phone='phone' 
-                placeholder='Ingrese su Telefono'
+                placeholder='Ingrese su telefono'
+                onChange={handleChange}
+              />   
+
+<input 
+                type="text" 
+                phone='adress' 
+                placeholder='Ingrese su domicilio'
                 onChange={handleChange}
               />   
             </form>
